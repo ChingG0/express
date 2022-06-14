@@ -21,6 +21,14 @@ app.get('/popular/languages',(req,res)=>{
     res.send('Javascript is a popular language')
 })
 
+//params
+// :
+app.get('/popular/languages/:language',(req,res)=>{
+    const lang = req.params.language
+    res.send(`${lang} is a popular language`)
+})
+
+
 //Listen and start the server
 app.listen(port,()=>{
     console.log(`Express is running on http://localhost:${port}`)
