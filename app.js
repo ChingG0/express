@@ -6,7 +6,22 @@ const app = express()
 const port = 3000
 
 //setting the route response
-//local host:3000/
+//localhost:3000/
 app.get('/',(req,res)=>{
-    res.send('this is my first Express Web App')
+    res.send('This is my first Express Web App!!')
+})
+
+//localhost:3000/food
+app.get('/food',(req,res)=>{
+    res.send('My favorite food is ice cream!!')
+})
+
+//localhost:3000/popular/languages
+app.get('/popular/languages',(req,res)=>{
+    res.send('Javascript is a popular language')
+})
+
+//Listen and start the server
+app.listen(port,()=>{
+    console.log(`Express is running on http://localhost:${port}`)
 })
